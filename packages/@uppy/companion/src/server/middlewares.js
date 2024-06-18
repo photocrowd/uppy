@@ -146,6 +146,8 @@ exports.cors = (options = {}) => (req, res, next) => {
     'origin',
     'content-type',
     'accept',
+    'sentry-trace',
+    'baggage'
   ]
   const existingAllowHeaders = res.get('Access-Control-Allow-Headers')
   const allowHeadersSet = new Set(existingAllowHeaders
